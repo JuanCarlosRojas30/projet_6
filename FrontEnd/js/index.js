@@ -47,7 +47,7 @@ const displayWorks = () =>
     
     worksData.forEach(work => {
 
-    if(currentCat===work.categoryId )
+    if(currentCat===work.categoryId) //⏐⏐ currentCat===0
         gallery.innerHTML += `
         <figure>
         <img src="${work.imageUrl}" alt="${work.title}">
@@ -57,10 +57,23 @@ const displayWorks = () =>
 } 
 
 //affichage categories
-const displayFiltres = () => {
-    categoryData.forEach(category => {
-        filters.innerHTML += `<button class="filter__btn">${category.name}</button>`
+const displayFiltres = () => 
+{
+    filters.innerHTML = "<button class='filter__btn filter__btn--active'>Tous</button>";
+    categoryData.forEach((category, i) => {
+        filters.innerHTML += `<button class="filter__btn">${category.name}</button>`;
+    
+    if (i === categoryData.length-1) {
 
+        const filtresBtn = document.getElementsByClassName(`filter__btn`);
+
+        for (let i = 0; i < filtresBtn.length; i++){
+            filtresBtn[i].addEventListener("click", () =>  {
+                currentCat = i;
+                displayWorks();
+            });
+        }
+    }    
     } )
 } 
 
