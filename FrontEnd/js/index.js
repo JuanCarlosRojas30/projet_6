@@ -43,11 +43,11 @@ const getCategory = () => {
 const displayWorks = () => 
 {
 
-    gallery.innerHTML += "";
+    gallery.innerHTML = "";
     
     worksData.forEach(work => {
 
-    if(currentCat===work.categoryId) //⏐⏐ currentCat===0
+    if(currentCat===work.categoryId || currentCat===0)
         gallery.innerHTML += `
         <figure>
         <img src="${work.imageUrl}" alt="${work.title}">
