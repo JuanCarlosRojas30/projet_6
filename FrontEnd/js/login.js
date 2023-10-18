@@ -14,7 +14,7 @@ btnEnvoyer.addEventListener('click', (e) => {
 
     fetch("http://localhost:5678/api/users/login", {
     method: "POST",
-    headers: { "Contetn-Type": "application/json;charset=utf-8" },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
         email:email,
         password: password,

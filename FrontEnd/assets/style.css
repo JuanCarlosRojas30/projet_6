@@ -54,6 +54,14 @@ body {
 	font-size: 14px;
 	background: #FFFEF8;
 }
+
+.btnEdition {
+	background-color: black;
+	width: 1440px;
+	height: 59px;
+	size: 16px;
+	color: white;
+}
 header {
 	display: flex;
 	justify-content: space-between;
@@ -99,6 +107,11 @@ nav li {
 .login-nav {
 	text-decoration: none;
 	color: black
+}
+
+a .login {
+	text-decoration: none;
+	color: black;
 }
 
 li:hover {
