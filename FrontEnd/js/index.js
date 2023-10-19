@@ -5,6 +5,7 @@ let categoryData = [];
 const gallery = document.querySelector(".gallery");
 let filters = document.querySelector(".filters");
 
+
 let currentCat = 0;
 
 
@@ -77,5 +78,23 @@ const displayFiltres = () =>
     } )
 } 
 
+//affichage works modal
+const displayWorksModal = () => 
+{
+    modalWorks.innerHTML = "";
+    
+     worksData.forEach(work => {
+
+    if(currentCat===work.categoryId || currentCat===0)
+    modalWorks.innerHTML += `
+        <figure>
+        <img src="${work.imageUrl}" alt="${work.title}">
+        <figcaption>${work.title}</figcaption>
+        </figure>`
+    } )
+} 
+
+
 getWorks();
 getCategory();
+

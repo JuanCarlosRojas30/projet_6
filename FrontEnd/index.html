@@ -13,8 +13,7 @@
 </head>
 <body>
 	<section id="adminBar">
-		<button class="btnEdition"><i class="fa-regular fa-pen-to-square"></i> Mode édition</button> 
-
+		<button id="btnEdition"><i class="fa-regular fa-pen-to-square"></i> Mode édition</button> 
 	</section>
 
 <header>
@@ -42,7 +41,22 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
+		<div class="btnAjouter">
+			<h2>Mes Projets</h2>
+			<button id="myBtn"><i class="fa-regular fa-pen-to-square"></i> Mode édition</button>
+
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+				<!-- Modal content -->
+				<div class="modalContent">
+				<span class="close">&times;</span>
+				<p>Galerie photo</p>
+					<div class="modalWorks">	
+					</div>
+				<input type="submit" value="Ajouter une photo">
+				</div>
+			</div>
+		</div>
 		<div class="filters">
 		</div>
 		<div class="gallery">
@@ -69,7 +83,7 @@
 		</ul>
 	</nav>
 </footer>
-<script src="./js/admin.js"></script>
 <script src="./js/index.js"></script>
+<script src="./js/admin.js"></script>
 </body>
 </html>
