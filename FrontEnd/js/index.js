@@ -97,4 +97,5 @@ const displayWorksModal = () =>
 
 getWorks();
 getCategory();
+displayWorksModal();
 
