@@ -18,8 +18,7 @@ const getWorks = () => {
         worksData = data;
         console.log(worksData);
         displayWorks();
-
-
+        displayWorksModal();
 })
 .catch((err) => console.log(err, "fetch error"));
 }
@@ -37,7 +36,6 @@ const getCategory = () => {
 })
 .catch((err) => console.log(err, "fetch error"));
 }
-
 
 
 //affichage works
@@ -78,24 +76,5 @@ const displayFiltres = () =>
     } )
 } 
 
-//affichage works modal
-const displayWorksModal = () => 
-{
-    modalWorks.innerHTML = "";
-    
-     worksData.forEach(work => {
-
-    if(currentCat===work.categoryId || currentCat===0)
-    modalWorks.innerHTML += `
-        <figure>
-        <img src="${work.imageUrl}" alt="${work.title}">
-        <figcaption>${work.title}</figcaption>
-        </figure>`
-    } )
-} 
-
-
 getWorks();
 getCategory();
-displayWorksModal();
-

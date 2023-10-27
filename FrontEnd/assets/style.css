@@ -347,3 +347,18 @@ body.login-page {
 	align-items: center;
 	justify-content: center;
 }
+.modalWorks {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+.modalWorks div {
+	width: 22%;
+}
+
+.modalWorks img {
+	width: 80%;
+}
