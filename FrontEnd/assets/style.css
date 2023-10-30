@@ -303,13 +303,13 @@ body.login-page {
   /* The Modal (background) */
 .modal {
 	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
+	position:fixed; /* Stay in place */
 	z-index: 1; /* Sit on top */
 	left: 0;
 	top: 0;
 	width: 100%; /* Full width */
 	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
+	overflow:scroll; /* Enable scroll if needed */
 	background-color: rgb(0,0,0); /* Fallback color */
 	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
@@ -326,7 +326,11 @@ body.login-page {
 	border-radius: 10px;
 
   }
-  
+
+  .modalContent p {
+	size: 40px;
+  }
+
   /* The Close Button */
   .close {
 	color: #aaa;
@@ -351,9 +355,10 @@ body.login-page {
 	display: flex;
 	gap: 10px;
 	flex-wrap: wrap;
-	justify-content: space-around;
 	margin-top: 20px;
+	padding: 15%;
 }
+
 
 .modalWorks div {
 	width: 22%;
@@ -361,4 +366,19 @@ body.login-page {
 
 .modalWorks img {
 	width: 80%;
+	flex-wrap: wrap;
+}
+
+.fa-trash {
+	position: 10px ;
+	background-color: black;
+	width: 17px;
+	height: 17px;
+	border-radius: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 6px;
+	right: 5px
 }
