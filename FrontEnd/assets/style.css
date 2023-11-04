@@ -370,8 +370,10 @@ body.login-page {
 }
 
 .fa-trash {
-	position: 10px ;
-	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* background-color: black;
 	width: 17px;
 	height: 17px;
 	border-radius: 2px;
@@ -380,5 +382,5 @@ body.login-page {
 	justify-content: center;
 	position: absolute;
 	top: 6px;
-	right: 5px
+	right: 5px */
 }
