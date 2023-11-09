@@ -1,6 +1,17 @@
 //affichage works modal
 const modalWorks = document.querySelector(".modalWorks");
 
+const modalSwitcher = (value) =>  { 
+    if(value === 1){
+        modalGallery.style.display = "block";
+        modalInput.style.display = "none";
+    }
+    else {
+        modalGallery.style.display = "none";
+        modalInput.style.display = "block";
+    }
+
+}
 
 const displayWorksModal = () => 
 {
@@ -30,15 +41,25 @@ const displayWorksModal = () =>
 } 
 
 const supprimeWork = (id) => {
-    fetch("http://localhost:5678/api/works" + id,{
+    fetch("http://localhost:5678/api/works/" + id,{
         method: "DELETE",
         headers: {
-            Authorization: "Bearer" + JSON.parse(localStorage.getItem("info")).token, 
+            Authorization: "Bearer " + JSON.parse(localStorage.getItem("info")).token, 
         },
     })
     .then((response) => {
-        console.log(response);
+        // console.log(response);
         getWorks();
     })
     .catch((err) => console.log(err, "fetch error"));
 };
+
+modalSwitcher(1);
+
+goToAddPhoto = document.getElementById("goToAddPhoto");
+
+goToAddPhoto.addEventListener("click", () =>  {
+modalSwitcher(2);
+})
+
+

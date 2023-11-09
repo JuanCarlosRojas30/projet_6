@@ -65,21 +65,28 @@
 	</section>
 </main>
 <footer>
-	<div id="myModal" class="modal">
-		<div class="modalContent">
-		<span class="close">&times;</span>
-		<p>Galerie photo</p>
-			<div class="modalWorks">	
-			</div>
-		<input type="submit" value="Ajouter une photo">
-		</div>
-	</div>
 	<nav>
 		<ul>
 			<li>Mentions Légales</li>
 		</ul>
 	</nav>
 </footer>
+<div id="myModal" class="modal">
+	<div class="modalContent">
+		<div id="modalInput">
+			<span class="close backToGallery">&times;</span>
+			<p>Ajout photo</p>
+			<div class="">Form</div>
+			<input id="ValidateBtn" type="button" value="Valider">
+		</div>	<div id="modalGallery">
+			<span class="close">&times;</span>
+			<p>Galerie photo</p>
+			<div class="modalWorks"></div>
+			<input id="goToAddPhoto" type="button" value="Ajouter une photo">
+		</div>
+			
+	</div>
+</div>
 <script src="./js/index.js"></script>
 <script src="./js/admin.js"></script>
 <script src="./js/modal.js"></script>

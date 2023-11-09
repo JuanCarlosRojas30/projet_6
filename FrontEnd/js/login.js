@@ -7,10 +7,6 @@ btnEnvoyer.addEventListener('click', (e) => {
     const email = document.getElementById('email').value
     const password = document.getElementById('password').value
 
-    const userData = {
-        email: email,
-        password : password,
-    }
 
     fetch("http://localhost:5678/api/users/login", {
     method: "POST",
