@@ -73,18 +73,41 @@
 </footer>
 <div id="myModal" class="modal">
 	<div class="modalContent">
-		<div id="modalInput">
-			<span class="close backToGallery">&times;</span>
-			<p>Ajout photo</p>
-			<div class="">Form</div>
-			<input id="ValidateBtn" type="button" value="Valider">
-		</div>	<div id="modalGallery">
+
+
+		<div id="modalGallery">
 			<span class="close">&times;</span>
 			<p>Galerie photo</p>
 			<div class="modalWorks"></div>
 			<div class="barre"><p></p></div>
 			<input id="goToAddPhoto" type="button" value="Ajouter une photo">
 		</div>
+		<div id="modalInput">
+			<span class="close">&times;</span>
+			<form class="modaleProjetForm">
+				<div class="formGroupPhoto">
+					<i class="fa-regular fa-image"></i>
+					<label for="photo">+ Ajouter une photo</label>
+					<input type="file" name="photo" id="photo">
+				</div>
+				<div class="formGroupTitle">
+					<label for="titre">Titre</label>
+					<input type="text" name="titre" id="titre">
+				</div>
+	
+				<div class="formGroupId">
+					<label>Catégorie</label>
+					<select id="categorie">
+						<option value="0">Veillez choisir une categorie</option>
+						<option value="1">Objets</option>
+						<option value="2">Appartements</option>
+						<option value="3">Hôtels & restaurants</option>
+					</select>
+				</div>
+			</form>
+			<div class="barre"><p></p></div>	
+			<input type="button" value="Valider">
+		</div>	
 			
 	</div>
 </div>
