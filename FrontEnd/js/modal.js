@@ -62,4 +62,55 @@ goToAddPhoto.addEventListener("click", () =>  {
 modalSwitcher(2);
 })
 
+backToGallery= document.getElementById("backToGallery");
 
+backToGallery.addEventListener("click", () => {
+    modalSwitcher(1);
+})
+
+
+FormTitre = document.getElementById("FormTitre");
+
+FormTitre.addEventListener("change", () => {
+    ActiveBtn();
+})
+
+FormCategorie = document.getElementById("FormCategorie");
+
+FormCategorie.addEventListener("change", () => {
+    ActiveBtn();
+})
+
+FormPhoto= document.getElementById("FormPhoto");
+
+FormPhoto.addEventListener("change", () => {
+    ActiveBtn();
+})
+
+const ActiveBtn = () => {
+    if(FormTitre.value==="" || FormCategorie.value==="0" || FormPhoto.files.length===0) {
+        ValiderBtn.classList.add("ValidBtndeActived")
+        ValiderBtn.setAttribute("disabled", "");
+    }
+    else {
+        ValiderBtn.classList.remove("ValidBtndeActived")
+        ValiderBtn.removeAttribute("disabled");
+
+
+    }
+
+}
+
+ValiderBtn = document.getElementsById("ValiderBtn");
+ValiderBtn.addEventListener("click", () => {
+
+    const Title = FormTitle.value;
+    const Categorie = FormCategorie.value;
+    const Photo = FormPhoto.files[0];
+
+    const formData = new formData();
+
+    formData.append("image", Photo);
+    formData.append("title", Title);
+    formData.append("category", Categorie);
+})

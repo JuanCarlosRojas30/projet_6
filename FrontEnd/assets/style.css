@@ -525,3 +525,12 @@ body.login-page {
 	border-radius: 60px;
 	transition: all 0.5s ease;
   }
+
+  .leftArrow {
+	display: flex;
+	justify-content: space-between;
+  }
+
+  .ValidBtndeActived {
+	background-color: gray !important;
+  }
