@@ -113,4 +113,33 @@ ValiderBtn.addEventListener("click", () => {
     formData.append("image", Photo);
     formData.append("title", Title);
     formData.append("category", Categorie);
+
+    // let response = await fetch("http://localhost:5678/api/works", {
+    //     method: "POST",
+    //     headers: {
+    //         "Accept" : "application/json",
+    //         "Authorization" : "Bearer " + JSON.parse(localStorage.getItem("info")).token, 
+    //     },
+    //     body: formData,
+    // });
+
+
 })
+
+    // Condition si on réussi à rajouter l'image
+
+    if (response.status === 200 || 201) {
+        getWorks();
+
+        document.getElementById("modaleProjetForm").reset();
+
+        ActiveBtn();
+        modalSwitcher(1);
+
+        alert("L'ajout de l'image a été réalisé avec succès");
+
+     } else if (response.status === 401 || 400) {
+        alert("Veuillez ajouter un titre ou image");
+        console.log("Action impossible");
+    }
+
