@@ -15,8 +15,13 @@ FormCategorie = document.getElementById("FormCategorie");
 FormCategorie.addEventListener("change", () => ActiveBtn())
 
 FormPhoto= document.getElementById("FormPhoto");
-FormPhoto.addEventListener("change", () => ActiveBtn())
+FormPhoto.addEventListener("change", () => {
 
+ActiveBtn();
+photoPreview = document.getElementById("photoPreview")
+photoPreview.src = URL.createObjectURL(FormPhoto.files[0]);
+
+})
 
 ValiderBtn = document.getElementById("ValiderBtn");
 ValiderBtn.addEventListener("click", () => AddWork())
