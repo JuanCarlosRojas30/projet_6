@@ -24,7 +24,7 @@ btnEnvoyer.addEventListener('click', (e) => {
                 localStorage.setItem("info", JSON.stringify(response));
                 document.location.href = "/";
            } else if (response.message) {
-                alert ("user not found");
+                alert ("Utilisateur non trouvé");
            } else {
                 alert("Mot de passe invalide");
            }

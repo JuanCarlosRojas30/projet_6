@@ -66,6 +66,10 @@ const displayFiltres = () =>
     } )
 } 
 
+// document.querySelectorAll(".filter__btn").forEach(btn => {
+// btn.classList.remove("filter__btn--active");})
+// document.querySelector(`.filter__btn-id-${id}`).classList.add("filter__btn--active");
+
 
 //affichage works modal
 const modalWorks = document.querySelector(".modalWorks");
@@ -103,7 +107,7 @@ const displayWorksModal = () =>
                 suppBtns[j].addEventListener("click", () =>  {
                     //alert(suppBtns[j].getAttribute("data-id"))
                     const id = suppBtns[j].getAttribute("data-id");
-                    if (confirm("Press a button!") === true) {
+                    if (confirm("Êtes-vous sûr de vouloir supprimer le contenu ?") === true) {
                         supprimeWork(id)
                     }
                 });

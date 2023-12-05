@@ -9,6 +9,5 @@ let filters = document.querySelector(".filters");
 let currentCat = 0;
 
 
-
 getWorks();
 getCategory();
