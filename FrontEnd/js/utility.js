@@ -33,7 +33,16 @@ const displayWorks = () =>
 {
 
     gallery.innerHTML = "";
-    
+
+    const Btns = filters.children
+    for(let i=0;i<Btns.length;i++){        
+        Btns[i].classList.remove('filter__btn--active')// retir la class active a tous les boutton
+
+        if(i===currentCat) 
+        {Btns[i].classList.add('filter__btn--active')} // ajoute la class active au button choisi
+    }
+
+
     worksData.forEach(work => {
 
     if(currentCat===work.categoryId || currentCat===0)
@@ -43,7 +52,7 @@ const displayWorks = () =>
         <figcaption>${work.title}</figcaption>
         </figure>`
     } )
-} 
+}
 
 //affichage categories
 const displayFiltres = () => 
@@ -65,11 +74,6 @@ const displayFiltres = () =>
     }    
     } )
 } 
-
-// document.querySelectorAll(".filter__btn").forEach(btn => {
-// btn.classList.remove("filter__btn--active");})
-// document.querySelector(`.filter__btn-id-${id}`).classList.add("filter__btn--active");
-
 
 //affichage works modal
 const modalWorks = document.querySelector(".modalWorks");
